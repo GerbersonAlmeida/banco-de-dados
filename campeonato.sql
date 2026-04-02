@@ -57,9 +57,18 @@ INSERT INTO tb_equipe
 -- SELECT * FROM - é a função para mostrar os dados do banco CRUD(READ)
 SELECT * FROM tb_equipe;
 
--- UPDATE - é a função para mudar valores no banco de dados CRUD(CREATE)
+-- UPDATE - é a função para mudar valores no banco de dados CRUD(UPDATE)
 UPDATE tb_equipe
-SET estado = "MD"
-WHERE nome_equipe
+SET nome_equipe = "Real Madrid"
+WHERE cod_equipe = 7;
+	
+
+-- DELETE - deleta linhas da da tabela no banco de dados (DELETE)
+DELETE FROM tb_equipe
+WHERE cod_equipe = 1;
+
+DELETE FROM tb_equipe
+WHERE cod_equipe = 8;
+
 
 
