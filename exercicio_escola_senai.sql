@@ -69,7 +69,48 @@ CREATE TABLE tb_matricula(
     
 );
 
--- 
+-- declaraando valores na tabela tb_matriculas
+	INSERT INTO tb_matricula
+		VALUES
+			(DEFAULT, 2, 20260912, 2),
+			(DEFAULT, 1, 20260912, 3),
+            (DEFAULT, 2, 20260912,3),
+            (DEFAULT, 1, 20260912, 4),
+            (DEFAULT, 3, 20260912, 2),
+            (DEFAULT, 3, 20260912, 5),
+            (DEFAULT, 3, 20260912, 4),
+            (DEFAULT, 3, 20260912, 3),
+            (DEFAULT, 4, 20260913, 1),
+            (DEFAULT, 5, 20260913, 1),
+            (DEFAULT, 6, 20260913, 1),
+            (DEFAULT, 7, 20260914, 2),
+            (DEFAULT, 7, 20260914, 3),
+            (DEFAULT, 7, 20260914, 5),
+            (DEFAULT, 8, 20260912, 1),
+            (DEFAULT, 8, 20260912, 2),
+            (DEFAULT, 8, 20260912, 3),
+            (DEFAULT, 9, 20260912, 1),
+            (DEFAULT, 9, 20260912, 2),
+            (DEFAULT, 10, 20260912, 1);
+            
+SELECT * FROM tb_matricula;
+
+-- utilizando JOIN para fazer uma consulta relacional com junção
+SELECT
+	m.cod_mat,
+    a.ra_alun,
+    a.nome_alu,
+	c.cod_curs,
+	c.nome_curs,
+    m.data_mat
+    FROM tb_matricula m
+    JOIN tb_aluno a ON m.ip_aluno = a.ra_alun
+    JOIN tb_curso c ON m.ip_curso = c.cod_curs
+    WHERE cod_mat = 3;
+    
+	
+	
+            
 
 
 
