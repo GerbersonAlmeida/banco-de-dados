@@ -52,7 +52,7 @@ FROM top
 WHERE maior_posicao BETWEEN 10 AND 15
 ORDER BY maior_posicao ASC;
 
--- IN - Dentr ode uma lista
+-- IN - Dentro de uma lista
 SELECT *
 FROM top
 WHERE artista IN ('Justin Bieber', 'Maroon 5', 'Queen');
@@ -106,7 +106,7 @@ WHERE maior_posicao = 7
 LIMIT 5;
 
 -- SOMA DE RSULTADOS
-SELECT SUM(total_streams) AS total_de_strams_da_tabela
+SELECT SUM(total_streams) AS total_de_streams_da_tabela
 FROM top;
 
 -- Media de resultados
@@ -125,3 +125,29 @@ FROM top;
 SELECT *
 FROM top
 WHERE artista IS NULL;
+
+
+
+
+
+
+-- 1 Contagem de quantos artistas estão com valor nulo no nome.
+SELECT SUM(artista) AS artistas_com_valor_nulo
+FROM top;
+
+-- 2 Contagem total de quantos registros tem na tabela.
+SELECT COUNT(*)
+FROM top;
+
+-- 3 Contagem de quantas músicas estiveram no top 1.
+SELECT COUNT(*) AS total_musicas_maior_posicao
+FROM top
+WHERE maior_posicao = 1;
+
+-- 4 Qual a música que ficou por mais vezes no top 1.
+SELECT musica, MAX(musica) AS musica_top_vezes
+FROM top;
+
+
+
+
