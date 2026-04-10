@@ -132,21 +132,54 @@ WHERE artista IS NULL;
 
 
 -- 1 Contagem de quantos artistas estão com valor nulo no nome.
-SELECT SUM(artista) AS artistas_com_valor_nulo
-FROM top;
+SELECT COUNT(artista) AS artistas_com_valor_nulo
+FROM top
+WHERE artista IS NULL;
 
 -- 2 Contagem total de quantos registros tem na tabela.
 SELECT COUNT(*)
 FROM top;
 
 -- 3 Contagem de quantas músicas estiveram no top 1.
-SELECT COUNT(*) AS total_musicas_maior_posicao
+SELECT COUNT(maior_posicao) AS total_musicas_maior_posicao
 FROM top
 WHERE maior_posicao = 1;
 
 -- 4 Qual a música que ficou por mais vezes no top 1.
-SELECT musica, MAX(musica) AS musica_top_vezes
-FROM top;
+SELECT posicao, musica, artista, 
+	CAST(REPLACE(REPLACE(REPLACE(vezes_maior_posicao, 'x', ''), '(', ''), ')', '') AS UNSIGNED) AS vezes
+FROM top
+WHERE maior_posicao = 1
+ORDER BY vezes DESC
+LIMIT 1;
+
+-- 5 Quantos artistas diferentes há.
+SELECT
+	COUNT(DISTINCT artista) AS artistas
+FROM top
+ORDER BY posicao asc ;
+
+-- 6 Qual música com mais streams.
+SELECT musica, total_streams
+FROM top
+WHERE total_streams = (SELECT MAX(total_streams)
+FROM top);
+
+-- 7 Qual música com maior pico de streams.
+SELECT musica, pico_streams
+FROM top
+WHERE pico_streams = (SELECT MAX(pico_streams)
+FROM top);
+
+-- 8 Qual artista ficou mais vezes no top 1.
+select max(vezes_maior_posicao)
+from top;
+
+
+
+
+
+
 
 
 
