@@ -172,15 +172,73 @@ WHERE pico_streams = (SELECT MAX(pico_streams)
 FROM top);
 
 -- 8 Qual artista ficou mais vezes no top 1.
-select max(vezes_maior_posicao)
-from top;
+SELECT artista, CAST(REPLACE(REPLACE(REPLACE(vezes_maior_posicao, 'x', ''), '(', ''), ')', '') AS UNSIGNED) AS mais_vezes_top
+FROM top
+WHERE maior_posicao = 1 
+AND CAST(REPLACE(REPLACE(REPLACE(vezes_maior_posicao, 'x', ''), '(', ''), ')', '') AS UNSIGNED) > 0
+ORDER BY mais_vezes_top DESC
+LIMIT 1;
 
+-- 9 Qual artista possui mais registros.
+SELECT artista, COUNT(artista) AS registros
+FROM top
+GROUP BY artista
+ORDER BY COUNT(artista) DESC
+LIMIT 1;
 
+-- 10 Quantos artistas possuem nome iniciando com a letra “H”.
+SELECT COUNT(DISTINCT artista) AS artistas_comecam_com_h
+FROM top
+WHERE artista LIKE 'H%';
 
+-- 11 Quais as músicas da artista “Anitta” estão na tabela.
+SELECT posicao, musica, artista
+FROM top
+WHERE artista LIKE '%Anitta%';
 
+-- 12 Quantas músicas passaram da marca de 500 mil streams.    
+SELECT  COUNT(total_streams) AS total_streams_maior_500_mil
+FROM top
+WHERE total_streams > 500000;
 
+-- 13 Qual a música no registro 3480.
+SELECT  posicao, artista, musica
+FROM top
+WHERE posicao = 3480;
 
+-- 14 Quantas músicas o artista “The Weeknd” possui e quais.
+SELECT COUNT(musica) AS total_musicas
+FROM top
+WHERE artista LIKE '%The Weeknd%';
 
+SELECT musica, artista
+FROM top
+WHERE artista LIKE '%The Weeknd%';
 
+-- 15 Quantas músicas possuem “girl” no nome.
+SELECT COUNT(musica) AS total_musicas_com_girl
+FROM top
+WHERE musica LIKE '%girl%';
 
+-- 16 Qual o total de streams do artista “Post Malone”.
+SELECT SUM(total_streams) total_streams_PostMalone
+FROM top
+WHERE artista LIKE '%Post Malone%';
+
+-- 17 Quais são os 5 artistas com mais registros, de forma decrescente.
+SELECT artista, COUNT(artista) AS vezes
+FROM top
+GROUP BY artista
+ORDER BY COUNT(artista) DESC
+LIMIT 5;
+
+-- 18 Qual o total de streams das 10 músicas com mais streams.
+
+-- 19 Quais as músicas que já estiveram no top 1 e estiveram 7 vezes na maior posição
+
+-- 20 Quais músicas tiveram menos de 500 mil streams e ficaram entre o top 5 e 10.
+
+-- 21 Qual a música com o mínimo de streams que atingiu a 1ª posição no top 10.
+
+-- 22 Qual a música com o mínimo de streams da artista Taylor Swift.
 
