@@ -1,0 +1,39 @@
+livro_id;titulo;dt_lancamento;autor_id;genero_id
+1;Dom Quixote;1605-01-01;1;1
+2;Cem Anos de Solidão;1967-05-30;2;2
+3;1984;1949-06-08;3;3
+4;Orgulho e Preconceito;1813-01-28;4;1
+5;O Apanhador no Campo de Centeio;1951-07-16;5;4
+6;O Grande Gatsby;1925-04-10;6;1
+7;Crime e Castigo;1866-11-14;7;5
+8;Em Busca do Tempo Perdido;1913-11-14;8;1
+9;Moby Dick;1851-10-18;9;6
+10;O Senhor dos Anéis;1954-07-29;10;4
+11;Harry Potter e a Pedra Filosofal;1997-06-26;11;4
+12;O Pequeno Príncipe;1943-04-06;12;2
+13;O Hobbit;1937-09-21;10;4
+14;A Revolução dos Bichos;1945-08-17;13;10
+15;A Arte da Guerra;0000-00-00;14;6
+16;A Metamorfose;1915-10-15;15;7
+17;Anna Karenina;1877-01-01;16;1
+18;Ulisses;1922-02-02;17;8
+19;A Sangue Frio;1966-01-17;18;9
+20;O Sol é para Todos;1960-07-11;19;10
+21;O Leão, a Feiticeira e o Guarda-Roupa;1950-10-16;20;4
+22;A Ilha do Tesouro;1888-11-14;21;15
+23;O Nome da Rosa;1980-09-08;22;11
+24;O Morro dos Ventos Uivantes;1847-12-20;23;12
+25;O Código Da Vinci;2003-03-18;24;13
+26;As Crônicas de Nárnia;1950-10-16;20;4
+27;Os Miseráveis;1862-03-04;25;1
+28;O Retrato de Dorian Gray;1890-07-20;26;12
+29;Crepúsculo;2005-10-05;27;16
+30;O Exorcista;1971-09-26;28;17
+31;Guerra e Paz;1869-01-01;16;1
+32;O Conde de Monte Cristo;1844-08-28;29;4
+33;O Senhor das Moscas;1954-09-17;30;18
+34;O Caçador de Pipas;2003-05-29;31;19
+35;Matar um Rouxinol;1960-07-11;19;10
+36;A Cabana;2007-07-01;0;20
+37;O Médico e o Monstro;1886-01-05;0;12
+38;A Menina que Roubava Livros;2005-03-02;0;20
