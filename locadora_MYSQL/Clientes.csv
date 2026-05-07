@@ -1,0 +1,16 @@
+id_cliente;nome;email;data de nascimento;cpf;sexo
+1;Ana Silva;ana.silva@locadora.com;12/03/1985;12345678900;F
+2;Bruno Oliveira;bruno.oliveira@locadora.com;23/07/1990;23456789011;M
+3;Carla Pereira;carla.pereira@locadora.com;05/11/1982;34567890122;F
+4;Daniel Costa;daniel.costa@locadora.com;18/02/1995;45678901233;M
+5;Eduardo Almeida;eduardo.almeida@locadora.com;30/08/1988;56789012344;M
+6;Fernanda Lima;fernanda.lima@locadora.com;14/01/1992;67890123455;F
+7;Guilherme Rocha;guilherme.rocha@locadora.com;28/09/1986;78901234566;M
+8;Helena Fernandes;helena.fernandes@locadora.com;21/05/1993;89012345677;F
+9;Igor Santos;igor.santos@locadora.com;02/12/1984;90123456788;M
+10;Juliana Mendes;juliana.mendes@locadora.com;17/06/1991;51234567899;F
+11;Leonardo Martins;leonardo.martins@locadora.com;19/04/1987;12345678901;M
+12;Mariana Souza;mariana.souza@locadora.com;03/10/1996;23456789012;F
+13;Nelson Ribeiro;nelson.ribeiro@locadora.com;29/07/1983;34567890123;M
+14;Olivia Azevedo;olivia.azevedo@locadora.com;15/11/1994;45678901234;F
+15;Paulo Batista;paulo.batista@locadora.com;07/03/1989;56789012345;M
